@@ -1,0 +1,63 @@
+.feedback-form {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.feedback-form__title { margin-bottom: 1rem; color: #333; }
+.feedback-form__text { color: #666; margin-bottom: 1.5rem; }
+
+.field { margin-bottom: 1.25rem; display: flex; flex-direction: column; }
+.field__label { font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem; color: #444; }
+
+/* СОСТОЯНИЕ ПОКОЯ */
+.field__input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s;
+  outline: none;
+}
+
+/* СОСТОЯНИЕ ФОКУСА (когда кликнули в поле) */
+.field__input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* СОСТОЯНИЕ ОШИБКИ */
+.field__input--error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+.field__input--error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.field__error { color: #ef4444; font-size: 0.8rem; margin-top: 0.4rem; }
+
+/* Кнопка */
+.feedback-form__submit {
+  width: 100%;
+  padding: 0.8rem;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.feedback-form__submit:hover { background: #4f46e5; }
+.feedback-form__submit:disabled { background: #a5b4fc; cursor: not-allowed; }
+
+/* СОСТОЯНИЕ УСПЕХА */
+.feedback-form-success { text-align: center; background: #f0fdf4; border: 1px solid #bbf7d0; }
